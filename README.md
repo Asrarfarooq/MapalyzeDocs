@@ -1,0 +1,2 @@
+# Mapalyze
+Documentation Website
