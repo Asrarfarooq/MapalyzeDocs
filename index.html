@@ -15,9 +15,14 @@
         <ul>
             <li><a href="#project-description">Project Description</a></li>
             <li><a href="#team-members">Team Members</a></li>
-            <li><a href="#sprint-1-documents">Sprint 1 Documents</a></li>
-            <li><a href="#sprint-2-documents">Sprint 2 Documents</a></li>
-            <!-- Add more sprints as needed -->
+             <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Sprints</a>
+                <div class="dropdown-content">
+                    <a href="#sprint-1-documents">Sprint 1</a>
+                    <a href="#sprint-2-documents">Sprint 2</a>
+                    <!-- Add more sprints as needed -->
+                </div>
+            </li>
         </ul>
     </nav>
 
@@ -56,7 +61,23 @@
         </ul>
     </section>
 
-    <!-- Add more sprint sections as needed -->
+  <!-- Add this script tag before the closing </body> tag in your HTML -->
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+
+        window.scrollTo({
+            top: targetElement.offsetTop,
+            behavior: 'smooth'
+        });
+    });
+});
+</script>
+
 
 </body>
 </html>
